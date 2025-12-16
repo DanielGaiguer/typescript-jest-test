@@ -1,10 +1,3 @@
-/*
-Interface Segregation Principle (Principio da segregação de Interface) -
-os clientes não devem ser forçados a depender de interfaces que não utilizam
-Interface pode ser qualquer protocol, como type, interfaces ou membros abstratos que não utilizem, por heraça por exemplo, coisas que elas não irão utilizar
-Para resolver isso, não devemos criar interfaces muito infladas, pois, fazendo isso você está quebrando o ISP
-*/
-
 import {
   IndividualCustomerProtocol,
   EnterpriseCostumerProtocol,
