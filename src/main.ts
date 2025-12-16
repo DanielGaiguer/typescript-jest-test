@@ -27,8 +27,8 @@ const shoppingCart = new ShoppingCart(tenPercentDiscount);
 const messaging = new Messaging();
 const persistency = new Persistency();
 const enterpriseCostumer = new EnterpriseCostumer(
-    'Empresa Gigante',
-    '2222222222222',
+  'Empresa Gigante',
+  '2222222222222',
 );
 /*
 const individualCostumer = new IndividualCostumer(
@@ -50,10 +50,10 @@ const messagingMock = new MessagingMock();
 */
 
 const order = new Order(
-    shoppingCart,
-    messaging, // Agora, caso a messaging mock fosse colocada aqui, a classe nao se importaria, ja que ela implementa o protocolo
-    persistency,
-    enterpriseCostumer,
+  shoppingCart,
+  messaging, // Agora, caso a messaging mock fosse colocada aqui, a classe nao se importaria, ja que ela implementa o protocolo
+  persistency,
+  enterpriseCostumer,
 );
 
 shoppingCart.addItem(new Product('camiseta', 49.9));

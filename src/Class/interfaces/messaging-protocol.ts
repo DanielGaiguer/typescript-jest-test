@@ -1,3 +1,3 @@
 export interface MessagingProtocol {
-    sendMessage(msg: string): void;
+  sendMessage(msg: string): void;
 }

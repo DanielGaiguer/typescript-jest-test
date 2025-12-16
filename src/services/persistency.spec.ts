@@ -1,16 +1,25 @@
-describe('TESTANDO ALGUMA COISA ', () => {
-  it('Should return one (IT)', () => {
-    const number = 1;
-    expect(number).toBe(1);
-    //expect(number).not.toBe(1); // Nao seja 1
-  });
-});
+import { Persistency } from './persistency';
 
-describe('TESTANDO OUTRA COISA ', () => {
-  test('should return Daniel (TESTE)', () => {
-    const nome = 'Daniel';
-    expect(nome).toBe('Daniel');
-    //expect(nome).not.toBe('Gaiguer'); // Nao seja Gaiguer
+describe('Persistency', () => {
+  afterEach(() => jest.clearAllMocks());
+
+  it('should return undefined', () => {
+    // System under test
+    const sut = new Persistency(); // SUT é a classe princípal que está sendo testada
+    expect(sut.saveOrder()).toBeUndefined();
+  });
+
+  it('should call console.log once', () => {
+    const sut = new Persistency();
+    const consoleSpy = jest.spyOn(console, 'log');
+    sut.saveOrder(); //Precisa executar o metodo pro console.log ser chamado
+    expect(consoleSpy).toHaveBeenCalledTimes(1);
+  });
+
+  it('should call console.log once', () => {
+    const sut = new Persistency();
+    const consoleSpy = jest.spyOn(console, 'log');
+    sut.saveOrder(); //Precisa executar o metodo pro console.log ser chamado
+    expect(consoleSpy).toHaveBeenCalledTimes(1);
   });
 });
-// comando para rodar: npx jest

@@ -6,51 +6,51 @@ Para resolver isso, não devemos criar interfaces muito infladas, pois, fazendo 
 */
 
 import {
-    IndividualCustomerProtocol,
-    EnterpriseCostumerProtocol,
-    CustomerOrder,
+  IndividualCustomerProtocol,
+  EnterpriseCostumerProtocol,
+  CustomerOrder,
 } from './interfaces/costumer-protocol';
 
 export class IndividualCostumer
-    implements IndividualCustomerProtocol, CustomerOrder
+  implements IndividualCustomerProtocol, CustomerOrder
 {
-    firstName: string;
-    lastName: string;
-    cpf: string;
-    cnpj: string;
+  firstName: string;
+  lastName: string;
+  cpf: string;
+  cnpj: string;
 
-    constructor(firstName: string, lastName: string, cpf: string) {
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.cpf = cpf;
-        this.cnpj = '';
-    }
+  constructor(firstName: string, lastName: string, cpf: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.cpf = cpf;
+    this.cnpj = '';
+  }
 
-    getName(): string {
-        return this.firstName + this.lastName;
-    }
+  getName(): string {
+    return this.firstName + this.lastName;
+  }
 
-    getIDN(): string {
-        return this.cpf;
-    }
+  getIDN(): string {
+    return this.cpf;
+  }
 }
 
 export class EnterpriseCostumer
-    implements EnterpriseCostumerProtocol, CustomerOrder
+  implements EnterpriseCostumerProtocol, CustomerOrder
 {
-    name: string;
-    cnpj: string;
+  name: string;
+  cnpj: string;
 
-    constructor(name: string, cnpj: string) {
-        this.name = name;
-        this.cnpj = cnpj;
-    }
+  constructor(name: string, cnpj: string) {
+    this.name = name;
+    this.cnpj = cnpj;
+  }
 
-    getName(): string {
-        return this.name;
-    }
+  getName(): string {
+    return this.name;
+  }
 
-    getIDN(): string {
-        return this.cnpj;
-    }
+  getIDN(): string {
+    return this.cnpj;
+  }
 }
