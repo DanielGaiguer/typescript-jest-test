@@ -1,28 +1,15 @@
-import { Prod } from './product';
+import { Product } from './product';
 
-const createSut = () => {
-  return new Messaging();
+const createSut = (name: string, price: number): Product => {
+  return new Product(name, price);
 };
 
-describe('Messaging', () => {
+describe('Product', () => {
   afterEach(() => jest.clearAllMocks());
 
   it('should return undefined', () => {
-    const sut = createSut();
-    expect(sut.sendMessage('teste')).toBeUndefined();
-  });
-
-  it('should call console.log with "Mensagem enviada:" and msg', () => {
-    const sut = createSut();
-    const consoleSpy = jest.spyOn(console, 'log');
-    sut.sendMessage('teste');
-    expect(consoleSpy).toHaveBeenCalledWith('Mensagem enviada:', 'teste');
-  });
-
-  it('should call console.log once', () => {
-    const sut = createSut();
-    const consoleSpy = jest.spyOn(console, 'log');
-    sut.sendMessage('teste');
-    expect(consoleSpy).toHaveBeenCalledTimes(1);
+    const sut = createSut('Camiseta', 49.9);
+    expect(sut).toHaveProperty('name', 'Camiseta');
+    expect(sut.price).toBeCloseTo(49.9);
   });
 });
