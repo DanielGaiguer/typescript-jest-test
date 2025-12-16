@@ -16,10 +16,10 @@ describe('Persistency', () => {
     expect(consoleSpy).toHaveBeenCalledTimes(1);
   });
 
-  it('should call console.log once', () => {
+  it('should call console.log with "Pedido Salvo com sucesso..."', () => {
     const sut = new Persistency();
     const consoleSpy = jest.spyOn(console, 'log');
     sut.saveOrder(); //Precisa executar o metodo pro console.log ser chamado
-    expect(consoleSpy).toHaveBeenCalledTimes(1);
+    expect(consoleSpy).toHaveBeenCalledWith('Pedido Salvo com sucesso...');
   });
 });
