@@ -14,7 +14,7 @@ UM extremo baixo nivel e uma classe que implementa um metodo que faz alguma cois
 import { Messaging } from './services/messaging';
 import { Order } from './Class/order';
 import { Persistency } from './services/persistency';
-import { Product } from './Class/products';
+import { Product } from './Class/product';
 import { ShoppingCart } from './Class/shopping-cart';
 import { TenPercentDiscount } from './Class/discount';
 import { EnterpriseCostumer /*, IndividualCostumer*/ } from './Class/customer';
