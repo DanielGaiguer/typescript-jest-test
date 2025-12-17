@@ -1,9 +1,7 @@
-// Vamos criar uma interface para shopping cart
-import { Discount } from './discount'; // Discount e uma classe abstrata, entao e um protocol
+import { Discount } from './discount';
 import { CartItem } from './interfaces/cart_item';
 import { ShoppingCartProtocol } from './interfaces/shopping-cart-protocol';
 
-// Falamos que ela implementa o protocol
 export class ShoppingCart implements ShoppingCartProtocol {
   private readonly _items: CartItem[] = [];
 
