@@ -103,3 +103,6 @@ describe('Order', () => {
     expect(shoppingCartMockSpy).toHaveBeenCalledTimes(1);
   });
 });
+
+// IMPORTANTE - DESTAQUE
+// Para gerar o coverage report, basta dar o comando npx jest --coverage que o jest lhe dara o relatorio
